@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, Fire, Target, Trophy } from 'lucide-react';
+import { Calendar, Flame, Target, Trophy } from 'lucide-react';
 import WorkoutCalendar from './WorkoutCalendar';
 
 const Dashboard = () => {
@@ -35,7 +35,7 @@ const Dashboard = () => {
         <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
           <div className="flex items-center gap-4">
             <div className="bg-orange-100 p-3 rounded-full">
-              <Fire className="w-6 h-6 text-orange-500" />
+              <Flame className="w-6 h-6 text-orange-500" />
             </div>
             <div>
               <p className="text-gray-600 text-sm">Current Streak</p>
