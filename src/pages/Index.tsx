@@ -1,11 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Dashboard from '../components/Dashboard';
+import SplitManager from '../components/SplitManager';
+import ExerciseLibrary from '../components/ExerciseLibrary';
+import WorkoutTracker from '../components/WorkoutTracker';
+import ProgressTracker from '../components/ProgressTracker';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-4 py-6 max-w-6xl">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+            FitTracker Pro
+          </h1>
+          <p className="text-gray-600">Your personal fitness journey starts here</p>
+        </header>
+        
+        <Navigation />
+        
+        <main className="mt-8">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/splits" element={<SplitManager />} />
+            <Route path="/exercises" element={<ExerciseLibrary />} />
+            <Route path="/workout" element={<WorkoutTracker />} />
+            <Route path="/progress" element={<ProgressTracker />} />
+          </Routes>
+        </main>
       </div>
     </div>
   );
